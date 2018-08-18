@@ -25,8 +25,6 @@ Berry
 Harry
 '''
 
-number_of_student = int(input())
-
 students_data = [[input(), float(input())] for _ in range(number_of_student)]
 
 lowest_second = sorted(list(set([grade for name, grade in students_data])))[1]
