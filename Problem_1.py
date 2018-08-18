@@ -25,7 +25,6 @@ Berry
 Harry
 '''
 
-print('-----INPUT-----')
 N = int(input())
 
 students = []
@@ -43,6 +42,5 @@ for i in scores.keys():
     if scores[i] == lowest_second:
         result.append(i)
 
-print('-----OUTPUT-----')
 for k in sorted(result):
     print(k)
