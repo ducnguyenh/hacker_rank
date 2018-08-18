@@ -25,24 +25,12 @@ Berry
 Harry
 '''
 
-print('-----INPUT-----')
-N = int(input())
+number_of_student = int(input())
 
-students = []
-for _ in range(2 * N):
-    students.append(input().split())
+students_data = [[input(), float(input())] for _ in range(number_of_student)]
 
-scores = {}
-for element in range(0, len(students), 2):
-    scores[students[element][0]] = float(students[element + 1][0])
+lowest_second = sorted(list(set([grade for name, grade in students_data])))[1]
 
-lowest_second = sorted(set(scores.values()))[1]
+result = [name for name, grade in students_data if grade == lowest_second]
 
-result = []
-for i in scores.keys():
-    if scores[i] == lowest_second:
-        result.append(i)
-
-print('-----OUTPUT-----')
-for k in sorted(result):
-    print(k)
+print('\n'.join(sorted(result)))
