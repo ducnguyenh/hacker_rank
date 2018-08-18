@@ -24,6 +24,7 @@ Sample Output 0
 Berry
 Harry
 '''
+number_of_student = int(input())
 
 students_data = [[input(), float(input())] for _ in range(number_of_student)]
 
